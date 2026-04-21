@@ -4,4 +4,5 @@
 
 | Membre | Rôle Lab 0 | GitHub |
 | :--- | :--- | :--- |
-| foppa Laure | CP | @[foppachristianalaure-ship-it] |
+| foppa Laure | cp | @[foppachristianalaure-ship-it] |
+| christilyne kinga | DF | @[christilyneboo-oss · she/her] |
