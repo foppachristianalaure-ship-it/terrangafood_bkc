@@ -3,7 +3,8 @@ const dotenv = require('dotenv');
 const Restaurant = require('../models/Restaurant');
 const Plat = require('../models/Plat');
 
-dotenv.config();
+// Utilisation de ta version locale pour pointer vers le fichier .env
+dotenv.config({ path: '.env' });
 
 const restaurants = [
   {

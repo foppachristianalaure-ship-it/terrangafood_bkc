@@ -15,7 +15,7 @@
   POST /api/plats (si existe)
 - Pattern utilisé : MVC
 
-### Architecture Frontend (par DF -- [Prénom])
+### Architecture Frontend (par DF -- [christilyne])
 - Nombre de pages : ...
 - Composants réutilisables : Header, RestaurantCard, PlatCard
 - Méthode d'appel API : fetch dans lib/api.js
