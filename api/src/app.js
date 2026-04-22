@@ -6,10 +6,12 @@ const dotenv = require('dotenv');
 
 const restaurantRoutes = require('./routes/restaurants');
 const platRoutes = require('./routes/plats');
+const commandeRoutes = require('./routes/commandes'); // ✅ AJOUTÉ
 const errorHandler = require('./middleware/errorHandler');
 
 // Charger les variables d'environnement
-dotenv.config({ path: '../.env' });
+const path = require('path');
+dotenv.config({ path: path.join(__dirname, '../.env') });
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -26,13 +28,15 @@ app.get('/', (req, res) => {
     version: '0.0.0',
     endpoints: {
       restaurants: '/api/restaurants',
-      plats: '/api/plats'
+      plats: '/api/plats',
+      commandes: '/api/commandes' // ✅ AJOUTÉ
     }
   });
 });
 
 app.use('/api/restaurants', restaurantRoutes);
 app.use('/api/plats', platRoutes);
+app.use('/api/commandes', commandeRoutes); // ✅ AJOUTÉ
 
 // --- Gestion des erreurs ---
 app.use(errorHandler);
