@@ -2,9 +2,17 @@
 
 ## Équipe : [bkc]
 
-### Architecture Backend (par DB -- [Prénom])
-- Nombre de modèles : ...
-- Endpoints existants : GET /api/restaurants, GET /api/restaurants/:id, ...
+### ### Architecture Backend (par DB -- Rokhaya Sene)
+- Nombre de modèles : 2 (Restaurant, Plat)
+- Champs principaux :
+  - Restaurant : nom, cuisine, adresse, téléphone, description, note, horaires, estOuvert
+  - Plat : nom, description, prix, catégorie, restaurant (ref)
+- Endpoints existants :
+  GET /api/restaurants
+  GET /api/restaurants/:id
+  GET /api/plats
+  POST /api/restaurants (si existe)
+  POST /api/plats (si existe)
 - Pattern utilisé : MVC
 
 ### Architecture Frontend (par DF -- [Prénom])
