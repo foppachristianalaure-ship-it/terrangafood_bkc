@@ -9,7 +9,8 @@ const platRoutes = require('./routes/plats');
 const errorHandler = require('./middleware/errorHandler');
 
 // Charger les variables d'environnement
-dotenv.config({ path: '../.env' });
+const path = require('path');
+dotenv.config({ path: path.join(__dirname, '../.env') });
 
 const app = express();
 const PORT = process.env.PORT || 3001;
