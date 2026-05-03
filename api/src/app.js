@@ -11,7 +11,11 @@ const errorHandler = require('./middleware/errorHandler');
 
 // Charger les variables d'environnement
 const path = require('path');
-dotenv.config({ path: path.join(__dirname, '../.env') });
+const envPath = path.resolve(__dirname, '../../.env');
+const fs = require('fs');
+if (fs.existsSync(envPath)) {
+  dotenv.config({ path: envPath });
+}
 
 const app = express();
 const PORT = process.env.PORT || 3001;
